@@ -1,0 +1,286 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+/* Header Part */
+
+header {
+    height: 70px;
+    width: 100%;
+    background: rgb(175,70,72);
+    background: linear-gradient(146deg, rgba(175,70,72,0.5) 0%, rgba(47,16,0,0.5) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    backdrop-filter: blur(8px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.less {
+    margin-top: -350px;
+    margin-left: 90px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #fff;
+    color: #333;
+    border-radius: 15px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.line1 {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.line2 {
+    opacity: 0;
+}
+
+.line3 {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Page one */
+
+section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.pageOne {
+    background-image: url(https://t3.ftcdn.net/jpg/03/40/93/00/360_F_340930009_WtmPbofCmuBGo3SxTR59e3qUrUs8Bm2Y.jpg);
+    background-size: cover;
+}
+
+.img-overlay {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(255,94,98);
+    background: linear-gradient(146deg, rgba(255,94,98,0.7) 0%, rgba(255,153,102,0.9) 100%);
+}
+
+.slogan {
+    padding: 170px 100px;
+    font-weight: bold;
+    font-size: 45px;
+    color: #fff;
+}
+
+/* page two */
+
+.section-title {
+    color: #c55f2c;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+i{
+    padding-right: 20px;
+}
+
+/* Cards system */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-radius: 15px;
+    transition: 0.7s ease-out;
+    
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    max-width: 250px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 15px;
+    object-fit: fill;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.card button {
+    background-color: #af4648;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    transition: 0.7s ease-out;
+}
+
+.card button:hover {
+    background-color: #b76b6c;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #e8e8e8;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 97.9%;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+
+    .nav{
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .logo a {
+        font-size: medium;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        top: 70px;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: all 0.5s ease;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+
+    section {
+
+        width: auto;
+    }
+
+    .slogan {
+        font-size: 30px;
+        padding: 170px 10px 0px;
+    }
+
+    .less {
+        margin-top: -130px;
+        margin-left: 40px;
+        font-size: 25px;
+    }
+
+    .img-overlay {
+        width: 100%;
+        height: 100vh;
+        background: rgb(255,94,98);
+        background: linear-gradient(146deg, rgba(255,94,98,0.7) 0%, rgba(255,153,102,0.9) 100%);
+    }
+
+}
